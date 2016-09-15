@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Shipping Calculator</string>
+    <string name="subTitle">Weight of the package</string>
 </resources>
