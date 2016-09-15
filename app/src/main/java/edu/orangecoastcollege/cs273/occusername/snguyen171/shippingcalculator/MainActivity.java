@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         weightEditText = (EditText) findViewById(R.id.weightEditText);
+        weightEditText.requestFocus();
         baseCostNum = (TextView) findViewById(R.id.baseCostNum);
         addedCostNum = (TextView) findViewById(R.id.addedCostNum);
         totalCostNum = (TextView) findViewById(R.id.totalCostNum);

@@ -40,15 +40,20 @@ public class ShipItem {
         {
             mBase = 3.00;
         }
-        else
+        else if (mWeight > 0)
         {
-            mBase = 0.00;
+            mBase = 3.00;
+        }
+
+        if (mWeight < 16 && mWeight > 0)
+        {
+            mAdded = 0.00;
         }
 
         if(mWeight > 16)
         {
-            double additionWeight = (mWeight - 16)/4;
-            mAdded = Math.ceil(additionWeight) * 0.5;
+            double additionWeight = ((mWeight - 16)/4);
+            mAdded = (Math.ceil(additionWeight) * 0.5);
         }
 
         mTotal = mBase + mAdded;
