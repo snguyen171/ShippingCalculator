@@ -24,9 +24,9 @@ public class ShipItem {
     }
 
     public int getWeight() {return mWeight; }
-    public int getBase() {return mBase; }
-    public int getAdded() {return mAdded; }
-    public int getTotal() {return mTotal; }
+    public double getBase() {return mBase; }
+    public double getAdded() {return mAdded; }
+    public double getTotal() {return mTotal; }
 
     public void setWeight(int mWeight){
         this.mWeight = mWeight;

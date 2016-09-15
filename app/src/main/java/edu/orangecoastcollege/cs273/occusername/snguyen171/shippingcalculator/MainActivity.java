@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         addedCostNum = (TextView) findViewById(R.id.addedCostNum);
         totalCostNum = (TextView) findViewById(R.id.totalCostNum);
 
+        weightEditText.addTextChangedListener(weightEditTextListener);
+
         currentItem.setWeight(0);
     }
 
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-            baseCostNum.setText(currency.format)
+            updateViews();
         }
 
         @Override
@@ -65,4 +67,14 @@ public class MainActivity extends AppCompatActivity {
             // Do nothing;
         }
     };
+
+    private void updateViews()
+    {
+        // 1)
+        baseCostNum.setText(currency.format(currentItem.getBase()));
+        // 2)
+        addedCostNum.setText(currency.format(currentItem.getAdded()));
+        // 3)
+        totalCostNum.setText(currency.format(currentItem.getTotal()));
+    }
 }
